@@ -1,0 +1,100 @@
+.landing {
+  background-color: $color-green;
+  overflow: hidden;
+
+  &__container {
+    @extend %tempale-container;
+
+    height: 604px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 860px) {
+      gap: 5px;
+      height: 800px;
+      flex-direction: column;
+    }
+  }
+
+  &__text-block {
+    min-width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    gap: 20px;
+    color: $color-white;
+
+    @media (max-width: 860px) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  &__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__link {
+    @extend %template-button;
+
+    color: $color-white;
+    border-color: $color-white;
+  }
+
+  &__picture-block {
+    min-height: 900px;
+    min-width: 900px;
+
+    box-sizing: border-box;
+    border: 90px solid $color-green-light;
+    border-radius: 50%;
+
+    background-color: $color-salat;
+
+    background-image: url("../src/public/img/chair-main.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto 100%;
+
+    animation: animation 5s ease infinite;
+
+    @media (max-width: 1024px) {
+      margin-top: 10px;
+      min-height: 650px;
+      min-width: 650px;
+      border-width: 50px;
+      animation-name: animation_little-border;
+    }
+  }
+}
+
+@keyframes animation {
+  0% {
+    border-width: 90px;
+  }
+  50% {
+    border-width: 150px;
+  }
+  100% {
+    border-width: 90px;
+  }
+}
+
+@keyframes animation_little-border {
+  0% {
+    border-width: 50px;
+  }
+  50% {
+    border-width: 90px;
+  }
+  100% {
+    border-width: 50px;
+  }
+}

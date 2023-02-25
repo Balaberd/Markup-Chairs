@@ -1,0 +1,88 @@
+.header {
+  &__top-line {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    @media (max-width: 460px) {
+      gap: 10px;
+    }
+  }
+  &__link {
+    color: $color-dark;
+    @media (max-width: 600px) {
+      font-size: 13px;
+    }
+  }
+
+  &__second-line {
+    background-color: $color-white;
+  }
+  &__container {
+    @extend %tempale-container;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 860px) {
+      justify-content: space-around;
+    }
+  }
+}
+
+.logo-block {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  @media (max-width: 680px) {
+    gap: 10px;
+  }
+  &__logo-image {
+    @media (max-width: 680px) {
+      width: 30%;
+    }
+  }
+  &__company-name {
+    color: $color-green;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+
+    @media (max-width: 680px) {
+      flex-direction: column;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+.contacts-block {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__number {
+    font-size: 16px;
+    line-height: 19px;
+
+    @media (max-width: 680px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  &__order-callback {
+    @extend %template-button;
+
+    color: $color-black;
+  }
+}

@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@import "templates.scss";
+
+@import "reset.scss";
+@import "variable.scss";
+
+@import "components/header.scss";
+@import "components/landing.scss";
+@import "components/discount.scss";
+@import "components/promo.scss";
+@import "components/footer.scss";
+@import "components/nav.scss";
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  background-color: $color-gray;
+}

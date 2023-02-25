@@ -1,0 +1,67 @@
+.promo {
+  margin-top: 100px;
+
+  &__container {
+    @extend %tempale-container;
+
+    display: flex;
+    align-content: stretch;
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .card-item {
+    width: 50%;
+
+    height: 212px;
+    padding: 35px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: $color-green;
+
+    color: $color-white;
+
+    @media (max-width: 1024px) {
+      width: 80%;
+    }
+
+    &_first {
+      background-image: url("../src/public/icons/envelope.svg");
+      background-repeat: no-repeat;
+      background-position: 90% 50%;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      width: 55%;
+    }
+    &__decription {
+      line-height: 20px;
+      font-size: 14px;
+      width: 55%;
+    }
+    &__input {
+      padding: 9px 9px 9px 25px;
+      width: 75%;
+      line-height: 16px;
+      background-color: $color-white;
+      border-radius: 30px;
+      width: 40%;
+    }
+    &__link {
+      @extend %template-button;
+
+      color: $color-white;
+      border-color: $color-white;
+    }
+  }
+}

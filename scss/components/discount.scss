@@ -1,0 +1,67 @@
+.discount {
+  &__container {
+    @extend %tempale-container;
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+
+    margin-top: 80px;
+  }
+  &__card-wrapper {
+    margin-top: 38px;
+
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+
+    @media (max-width: 1280px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-around;
+    }
+    @media (max-width: 860px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 680px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .card-item {
+    justify-self: center;
+
+    padding: 20px 30px;
+    width: 195px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    &__photo {
+      width: 125px;
+      height: 166px;
+    }
+    &__description {
+      font-size: 14px;
+      line-height: 20px;
+      color: $color-dark;
+      text-align: center;
+    }
+    &__price {
+      font-size: 21px;
+      line-height: 25px;
+    }
+    &__buy {
+      background-color: $color-green;
+      border-radius: 30px;
+      padding: 9px 40px;
+      border: none;
+
+      color: $color-white;
+
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
